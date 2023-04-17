@@ -1,4 +1,4 @@
-import {mostrarAlerta} from './funciones.js'
+import {mostrarAlerta, validar} from './funciones.js'
 import {nuevoCliente} from './API.js'
 
 (function(){
@@ -19,9 +19,5 @@ import {nuevoCliente} from './API.js'
         }
 
         return validar(cliente) ? nuevoCliente(cliente) : mostrarAlerta('Todos los campos son obligatorios')
-
-        function validar(obj){
-            return Object.values(obj).every(input => input !== '')
-        }
     }
 })()
